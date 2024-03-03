@@ -1,0 +1,16 @@
+CREATE DATABASE mydatabase;
+
+\c mydatabase
+
+CREATE TABLE customers (
+    sno SERIAL PRIMARY KEY,
+    customer_name VARCHAR(100),
+    age INTEGER,
+    phone VARCHAR(15),
+    location VARCHAR(100),
+    created_at TIMESTAMP
+);
+
+
+INSERT INTO customers (customer_name, age, phone, location, created_at)
+VALUES ('John Doe', 30, '1234567890', 'New York', NOW());
